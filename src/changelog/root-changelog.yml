@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - changeSet: 
+      id: "owners"
+      author: "BeepBoop"
+      changes:
+        - sqlFile:
+            path: "../migrations/owners.sql"
+            relativeToChangelogFile: true
+            splitStatements: false
+
