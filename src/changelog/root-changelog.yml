@@ -7,4 +7,12 @@ databaseChangeLog:
             path: "../migrations/owners.sql"
             relativeToChangelogFile: true
             splitStatements: false
+  - changeSet:
+      id: "events"
+      author: "BeepBoop"
+      changes:
+        - sqlFile: 
+            path: "../migrations/events.sql"
+            relativeToChangelogFile: true
+            splitStatements: false
 
