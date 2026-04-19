@@ -4,7 +4,7 @@ databaseChangeLog:
       author: "BeepBoop"
       changes:
         - sqlFile:
-            path: "../migrations/owners.sql"
+            path: "migrations/owners.sql"
             relativeToChangelogFile: true
             splitStatements: false
   - changeSet:
@@ -12,7 +12,7 @@ databaseChangeLog:
       author: "BeepBoop"
       changes:
         - sqlFile: 
-            path: "../migrations/events.sql"
+            path: "migrations/events.sql"
             relativeToChangelogFile: true
             splitStatements: false
 

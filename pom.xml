@@ -74,7 +74,7 @@
                     <artifactId>liquibase-maven-plugin</artifactId>
                     <version> 5.0.2 </version>
                     <configuration>
-                        <propertyFile>/src/liquibase.properties</propertyFile>
+                        <propertyFile>src/main/resources/changelog/liquibase.properties</propertyFile>
                         <url>${env.PIBBLEST_DB_URL}</url>
                         <username>${env.PIBBLEST_DB_USER}</username>
                         <password>${env.PIBBLEST_DB_PASSWORD}</password>
