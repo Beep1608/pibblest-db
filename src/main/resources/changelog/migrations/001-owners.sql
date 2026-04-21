@@ -6,6 +6,7 @@ CREATE TABLE IF NOT EXISTS identity.owners (
     name              VARCHAR(100) NOT NULL,
     last_name         VARCHAR(100) NOT NULL,
     email             VARCHAR(255) UNIQUE NOT NULL,
+    verified_at       TIMESTAMP,
     password          VARCHAR(255) NOT NULL,
     organization_code VARCHAR(10) UNIQUE,
     is_active         BOOLEAN DEFAULT TRUE,
