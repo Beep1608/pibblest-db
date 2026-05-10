@@ -5,11 +5,10 @@ CREATE TABLE IF NOT EXISTS products (
     barcode TEXT ,
     description TEXT ,
     brand TEXT ,
-    tag_id BIGINT, 
     base_price NUMERIC(12,2) NOT NULL,
     cost NUMERIC(12,2) NOT NULL,
     quantity BIGINT NOT NULL DEFAULT 0,
     created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-    CONSTRAINT chk_products_quantity_positive CHECK (quantity => 0)
+    CONSTRAINT chk_products_quantity_positive CHECK (quantity >= 0)
 );
