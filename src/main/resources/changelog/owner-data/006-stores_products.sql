@@ -15,5 +15,5 @@ CREATE TABLE IF NOT EXISTS stores_products (
     CONSTRAINT fk_store FOREIGN KEY (store_id) REFERENCES stores(id) ON DELETE CASCADE,
     CONSTRAINT fk_product FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE,
 
-    CONSTRAINT chk_stores_quantity_positive CHECK (desiredQuantity >= 0)
+    CONSTRAINT chk_stores_quantity_positive CHECK (desired_quantity >= 0)
 );
