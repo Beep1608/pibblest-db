@@ -1,12 +1,12 @@
 CREATE TABLE IF NOT EXISTS employees_stores (
     id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY, 
     store_id BIGINT NOT NULL,
-    employee_id BIGINT NOT NULL,
+    employee_id UUID NOT NULL,
     is_active BOOLEAN NOT NULL DEFAULT TRUE, 
     created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP, 
     UNIQUE(store_id, employee_id),
 
     CONSTRAINT fk_store FOREIGN KEY (store_id) REFERENCES stores(id) ON DELETE CASCADE,
-    CONSTRAINT fk_employee FOREIGN KEY (employee_id) REFERENCES employees(id) ON DELETE CASCADE,
+    CONSTRAINT fk_employee FOREIGN KEY (employee_id) REFERENCES employees(id) ON DELETE CASCADE
 );
