@@ -1,3 +1,4 @@
+--TODO: Añadir la relacion con los empleados
 CREATE TABLE IF NOT EXISTS sales_details(
 
     id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
