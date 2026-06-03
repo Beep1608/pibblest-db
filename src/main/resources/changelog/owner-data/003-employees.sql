@@ -11,3 +11,5 @@ CREATE TABLE IF NOT EXISTS employees (
     last_active_at TIMESTAMP WITH TIME ZONE,
     deleted_at     TIMESTAMP WITH TIME ZONE
 );
+
+CREATE INDEX idx_employees_username ON employees(username);
