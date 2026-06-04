@@ -10,5 +10,6 @@ CREATE TABLE IF NOT EXISTS products (
     quantity BIGINT NOT NULL DEFAULT 0,
     created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    deleted_at TIMESTAMP WITH TIME ZONE, -- Agregado para borrado suave
     CONSTRAINT chk_products_quantity_positive CHECK (quantity >= 0)
 );
